@@ -44,11 +44,18 @@ const LINKS = {
   function setNav(open) {
     document.body.classList.toggle('nav-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    toggle.setAttribute('aria-label', open ? (toggle.dataset.labelClose || 'Закрыть меню') : (toggle.dataset.labelOpen || 'Открыть меню'));
   }
   toggle.addEventListener('click', function () { setNav(!document.body.classList.contains('nav-open')); });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setNav(false); });
+
+  // 3b. Language switcher: a manual pick is saved and always respected (see auto-detect script in the root <head>)
+  document.querySelectorAll('[data-lang-pick]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('uj_lang', a.dataset.langPick); } catch (e) {}
+    });
+  });
 
   // 4. Reveal on scroll
   const items = document.querySelectorAll('.reveal');

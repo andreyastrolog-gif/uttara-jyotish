@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://andreyastrolog-gif.github.io/uttara-jyotish/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://andreyastrolog-gif.github.io/uttara-jyotish/uk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://andreyastrolog-gif.github.io/uttara-jyotish/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
     <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://andreyastrolog-gif.github.io/uttara-jyotish/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://andreyastrolog-gif.github.io/uttara-jyotish/uk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://andreyastrolog-gif.github.io/uttara-jyotish/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://andreyastrolog-gif.github.io/uttara-jyotish/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://andreyastrolog-gif.github.io/uttara-jyotish/uk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://andreyastrolog-gif.github.io/uttara-jyotish/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>1.0</priority>
   </url>
 </urlset>
