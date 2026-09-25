@@ -486,3 +486,42 @@ ul,ol{margin:0;padding:0;list-style:none}
   .post-cta .btn{width:100%}
   .breadcrumbs span[aria-current]{max-width:24ch}
 }
+/* ===== v5: фотографии разделов ===== */
+.section-media,.svc-media,.final-media{margin:0;overflow:hidden;background:var(--bg-alt)}
+.section-media img,.svc-media img,.final-media img{width:100%;height:100%;object-fit:cover}
+.svc{overflow:hidden}
+.svc-media{margin:-40px -40px 32px;aspect-ratio:12/5}
+.svc-media img{object-position:50% 45%}
+#relocation .svc-media img{object-position:50% 40%}
+#children .svc-media img{object-position:50% 55%}
+.how-media{border-radius:var(--radius);aspect-ratio:12/5;margin-bottom:32px;box-shadow:var(--shadow)}
+.how-media img{object-position:40% 55%}
+.split-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:56px}
+.split-head .section-head{margin:0;text-align:left;max-width:none}
+.split-media{border-radius:var(--radius);aspect-ratio:3/2;box-shadow:var(--shadow)}
+.faq-media{border-radius:var(--radius);aspect-ratio:12/5;margin-bottom:28px}
+.faq-media img{object-position:50% 60%}
+.final-split{max-width:1100px;display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;padding:40px 48px 40px 40px;text-align:left}
+.final-media{border-radius:20px;aspect-ratio:1/1}
+.final-media img{object-position:45% 50%}
+.final-split h2{margin-left:0}
+.final-split p{margin-left:0}
+.final-split .hero-actions{justify-content:flex-start}
+@media (max-width:999px){
+  .svc-media{margin:-30px -30px 26px;aspect-ratio:2/1}
+  .split-head{grid-template-columns:1fr;gap:32px;margin-bottom:40px}
+  .split-head .section-head{text-align:center}
+  .final-split{grid-template-columns:1fr;gap:32px;padding:28px 28px 48px;text-align:center}
+  .final-media{aspect-ratio:3/2}
+  .final-split h2,.final-split p{margin-left:auto;margin-right:auto}
+  .final-split .hero-actions{justify-content:center}
+}
+@media (max-width:640px){
+  .svc-media{margin:-22px -22px 22px;aspect-ratio:16/10}
+  .how-media{aspect-ratio:3/2;margin-bottom:24px}
+  .faq-media{aspect-ratio:16/9;margin-bottom:22px}
+  .split-media{aspect-ratio:3/2}
+  .final-split{padding:16px 16px 40px}
+  .final-media{border-radius:16px}
+  .final-split .hero-actions .btn{width:100%}
+}
