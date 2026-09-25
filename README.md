@@ -17,6 +17,7 @@
 | `js/main.js` | Ссылки на соцсети (блок `LINKS` в начале), мобильное меню, запоминание выбранного языка, плавное появление блоков, FAQ |
 | `fonts/manrope.woff2` | Шрифт Manrope (локально, без Google Fonts) |
 | `img/andrey-desk-v*.jpg/.webp` | Фото Андрея, вертикальное 3:4 (900 px и 600 px) |
+| `img/sections/*.webp` | Фото разделов (консультации, «Как проходит», обучение, вопросы, финальный призыв), WebP 1600 и 800 px — генерируются `build.py` из оригиналов в `/workspace/site/work/generated/sections/` (Nano Banana Pro через Kie.ai, скрипт `gen_sections.py`); alt-тексты — `SECTION_IMG` в `i18n/*.py` |
 | `img/emblem-160.webp` | Логотип для шапки и подвала |
 | `img/og-image.jpg` | Картинка для превью ссылок в соцсетях и мессенджерах (1200×630) |
 | `favicon*.png`, `favicon.ico`, `apple-touch-icon.png`, `icon-*.png`, `site.webmanifest` | Иконки сайта |
