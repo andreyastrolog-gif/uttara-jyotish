@@ -8,8 +8,8 @@
  * сделать поиск-замену заглушек прямо в index.html — см. README.md.
  * ===================================================================== */
 const LINKS = {
-  telegram:        '#TELEGRAM_LINK',          // личный Telegram для записи, напр. https://t.me/username
-  telegramChannel: '#TELEGRAM_CHANNEL_LINK',  // Telegram-канал, напр. https://t.me/uttara_jyotish
+  telegram:        'https://t.me/andreyastrolog',          // личный Telegram для записи, напр. https://t.me/username
+  telegramChannel: 'https://t.me/andreyastrolog',  // Telegram-канал, напр. https://t.me/uttara_jyotish
   instagram:       '#INSTAGRAM_LINK',         // напр. https://instagram.com/uttara.jyotish
   youtube:         '#YOUTUBE_LINK',           // напр. https://youtube.com/@uttarajyotish
   tiktok:          '#TIKTOK_LINK',            // напр. https://tiktok.com/@uttara.jyotish
