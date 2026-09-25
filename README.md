@@ -12,7 +12,7 @@
 | `css/style.css` | Стили (цвета и шрифт настраиваются в `:root` в начале файла) |
 | `js/main.js` | Ссылки на соцсети (блок `LINKS` в начале), мобильное меню, плавное появление блоков, FAQ |
 | `fonts/manrope.woff2` | Шрифт Manrope (локально, без Google Fonts) |
-| `img/andrey-desk*.jpg/.webp` | Фото Андрея (1200 px и 800 px) |
+| `img/andrey-desk-v*.jpg/.webp` | Фото Андрея, вертикальное 3:4 (900 px и 600 px) |
 | `img/emblem-160.webp` | Логотип для шапки и подвала |
 | `img/og-image.jpg` | Картинка для превью ссылок в соцсетях и мессенджерах (1200×630) |
 | `favicon*.png`, `favicon.ico`, `apple-touch-icon.png`, `icon-*.png`, `site.webmanifest` | Иконки сайта |
@@ -55,4 +55,4 @@
 
 ## Как обновлять фото
 
-Замените `img/andrey-desk.jpg` / `.webp` (1200 px по ширине) и `img/andrey-desk-800.jpg` / `.webp` (800 px), сохранив пропорции 4:3 (или поправьте `width`/`height` в `index.html`).
+Замените `img/andrey-desk-v.jpg` / `.webp` (900×1200 px) и `img/andrey-desk-v-600.jpg` / `.webp` (600×800 px), сохранив пропорции 3:4 (или поправьте `width`/`height` в `index.html` и `aspect-ratio` в `css/style.css`).
