@@ -59,21 +59,13 @@ const LINKS = {
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    items.forEach(function (el) { io.observe(el); });
-  }
-
-  // 5. Card spotlight follows cursor
-  if (!reduceMotion) {
-    document.querySelectorAll('.card').forEach(function (card) {
-      card.addEventListener('pointermove', function (e) {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
+    items.forEach(function (el) {
+      if (el.closest('.hero')) { requestAnimationFrame(function () { el.classList.add('in'); }); }
+      else { io.observe(el); }
     });
   }
 
-  // 6. FAQ: keep one item open at a time
+  // 5. FAQ: keep one item open at a time
   const faqs = document.querySelectorAll('.faq-item');
   faqs.forEach(function (d) {
     d.addEventListener('toggle', function () {
@@ -81,58 +73,4 @@ const LINKS = {
     });
   });
 
-  // 7. Starry sky (canvas), paused off-screen; static when reduced motion
-  function starfield(canvas, density) {
-    if (!canvas || !canvas.getContext) return;
-    const ctx = canvas.getContext('2d');
-    let w, h, stars = [], raf = null, visible = true;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    function resize() {
-      const r = canvas.getBoundingClientRect();
-      w = r.width; h = r.height;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const n = Math.round(w * h / density);
-      stars = [];
-      for (let i = 0; i < n; i++) {
-        stars.push({
-          x: Math.random() * w, y: Math.random() * h,
-          r: Math.random() < 0.08 ? Math.random() * 1.3 + 1 : Math.random() * 0.9 + 0.25,
-          a: Math.random() * Math.PI * 2, s: 0.4 + Math.random() * 1.2,
-          gold: Math.random() < 0.25, vy: 0.02 + Math.random() * 0.05
-        });
-      }
-      draw(0);
-    }
-    function draw(t) {
-      ctx.clearRect(0, 0, w, h);
-      for (const s of stars) {
-        const tw = reduceMotion ? 0.8 : 0.55 + 0.45 * Math.sin(s.a + t * 0.001 * s.s);
-        ctx.globalAlpha = tw;
-        ctx.fillStyle = s.gold ? '#e7cd92' : '#f6eedc';
-        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
-        if (s.r > 1.2) { // soft glow on bigger stars
-          ctx.globalAlpha = tw * 0.18;
-          ctx.beginPath(); ctx.arc(s.x, s.y, s.r * 3.2, 0, Math.PI * 2); ctx.fill();
-        }
-        if (!reduceMotion) { s.y -= s.vy; if (s.y < -4) s.y = h + 4; }
-      }
-      ctx.globalAlpha = 1;
-    }
-    function loop(t) { draw(t); raf = visible ? requestAnimationFrame(loop) : null; }
-    resize();
-    let rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(resize, 150); });
-    if (reduceMotion) return;
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (en) {
-        visible = en[0].isIntersecting;
-        if (visible && !raf) raf = requestAnimationFrame(loop);
-      }).observe(canvas);
-    } else { raf = requestAnimationFrame(loop); }
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) { visible = false; } else if (!raf) { visible = true; raf = requestAnimationFrame(loop); }
-    });
-  }
-  starfield(document.getElementById('stars'), 2600);
-  starfield(document.getElementById('stars2'), 3200);
 })();
