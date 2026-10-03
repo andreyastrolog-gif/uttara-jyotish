@@ -6,7 +6,7 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://andreyastrolog-gif.github.io/uttara-jyotish/uk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://andreyastrolog-gif.github.io/uttara-jyotish/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -15,7 +15,7 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://andreyastrolog-gif.github.io/uttara-jyotish/uk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://andreyastrolog-gif.github.io/uttara-jyotish/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -24,7 +24,22 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://andreyastrolog-gif.github.io/uttara-jyotish/uk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://andreyastrolog-gif.github.io/uttara-jyotish/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://andreyastrolog-gif.github.io/uttara-jyotish/"/>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://andreyastrolog-gif.github.io/uttara-jyotish/blog/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://andreyastrolog-gif.github.io/uttara-jyotish/blog/category/znaki-zodiaka/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://andreyastrolog-gif.github.io/uttara-jyotish/blog/oven-v-vedicheskoy-astrologii/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
